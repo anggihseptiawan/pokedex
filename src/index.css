@@ -1,13 +1,86 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+h3 {
+	text-align: center;
+}
+
+.poke-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 10px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.poke-container .pokemon {
+	border-radius: 10px;
+	padding: 15px 20px;
+	position: relative;
+	text-align: center;
+}
+
+.poke-container img {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	transition: all 0.2s ease-in;
+}
+
+.poke-container .pokemon:hover img {
+	transform: scale(1.03);
+}
+
+.poke-container .pokemon p {
+	font-weight: 500;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.poke-container .pokemon p.number {
+	font-weight: unset;
+	font-size: 16px;
+	background: white;
+	border-radius: 10px;
+	padding: 2px 8px;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.poke-container .pokemon .img-container {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 150px;
+	height: 150px;
+	z-index: 0;
+	border-radius: 50%;
+	background: white;
+}
+
+footer p {
+	text-align: center;
+	margin-bottom: 30px;
 }
