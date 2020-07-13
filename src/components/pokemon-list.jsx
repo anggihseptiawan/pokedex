@@ -37,6 +37,7 @@ export const PokemonList = () => {
 				<div className="img-container"></div>
 				<img
 					src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}
+					alt={name}
 				/>
 				<p className="number">#{String(id).padStart(3, 0)}</p>
 				<p>{CustomName}</p>

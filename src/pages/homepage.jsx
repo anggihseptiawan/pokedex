@@ -4,7 +4,7 @@ import { PokemonList } from "../components/pokemon-list";
 const HomePage = () => {
 	return (
 		<>
-			<h3>POKEDEX</h3>
+			<h3>SHOWPOKEMON</h3>
 			<div className="poke-container">
 				<PokemonList />
 			</div>
