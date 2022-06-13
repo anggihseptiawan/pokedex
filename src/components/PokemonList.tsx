@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useFetch } from "../hook/useFetch";
+import { Pokemon } from "../@types/pokemon";
 
 export const PokemonList = () => {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [pokemonState, setPokemonState] = useState(2);
 
   const initPokemons = useFetch();
@@ -47,7 +48,7 @@ export const PokemonList = () => {
       {pokemons.map((pokemon) => {
         const { id, name, types } = pokemon;
 
-        const colors = {
+        const colors: any = {
           fire: "#ff7d56",
           grass: "#91f597",
           electric: "#f5e575",
@@ -71,12 +72,11 @@ export const PokemonList = () => {
             key={id}
             style={{ backgroundColor: colors[types[0].type.name] }}
           >
-            <div className="img-container"></div>
             <img
               src={`https://cdn.statically.io/gh/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
               alt={name}
             />
-            <p className="number">#{String(id).padStart(3, 0)}</p>
+            <p className="number">#{String(id).padStart(3, "0")}</p>
             <p className="poke-name">{name}</p>
             <span>type : {types[0].type.name}</span>
           </div>

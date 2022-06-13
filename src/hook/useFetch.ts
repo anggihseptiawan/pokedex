@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useFetch = () => {
-  const [pokemon, setPokemon] = useState([]);
+  const [pokemon, setPokemon] = useState<any[]>([]);
 
   useEffect(() => {
     const getData = async () => {
