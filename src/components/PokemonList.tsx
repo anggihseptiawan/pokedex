@@ -48,7 +48,7 @@ export const PokemonList = () => {
       {pokemons.map((pokemon) => {
         const { id, name, types } = pokemon;
 
-        const colors: any = {
+        const colors: Record<string, string> = {
           fire: "#ff7d56",
           grass: "#91f597",
           electric: "#f5e575",
